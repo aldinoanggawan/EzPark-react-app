@@ -1,38 +1,38 @@
-import React from 'react';
+import React from 'react'
 import BigLogo from '../BigLogo.png'
-import '../App.css';
+import '../App.css'
 
 const container = {
-    position: 'relative',
-    height: '100%',
-    textAlign: 'center',
+  height: '100%',
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  alignItems: 'center',
 }
 
 const logo = {
-    position: 'fixed',
-    left: '31%',
-    top: '33.5%',
-    transform: 'translate(-50%, -50%)',
+  maxWidth: '120%',
 }
 
-const circle ={
-    position: 'fixed',
-    left: '49%',
-    top: '42%',
-    transform: 'translate(-50%, -50%)',
-    borderRadius: '50%',
-    background: 'rgb(93, 49, 148)',
-    height: '100px',
-    width: '100px',
+const circle = {
+  height: '100px',
+  width: '100px',
+  borderRadius: '50%',
+  background: 'rgb(93, 49, 148)',
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  alignItems: 'center',
 }
 
 const Loading = () => {
-    return (
-        <div className="App" style={container}>
-            <div style={circle} />
-            <img src={BigLogo} className="App-logo" alt="logo" style={logo} />
-        </div>
-    )
+  return (
+    <div className='App' style={container}>
+      <div style={circle}>
+        <img src={BigLogo} className='App-logo' style={logo} alt='logo spinner' />
+      </div>
+    </div>
+  )
 }
 
 export default Loading

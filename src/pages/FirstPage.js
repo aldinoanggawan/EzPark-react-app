@@ -1,68 +1,81 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import styled, { css } from 'styled-components'
+
 import BigLogo from '../BigLogo.png'
-import {Link} from 'react-router-dom'
 
-// style
-const container = {
-    display:'flex',
-    flexDirection:'column',
-}
+// styling
+const Container = styled.div`
+  ${({ button }) =>
+    button &&
+    css`
+      width: 200px;
+      padding-top: 5rem;
+    `}
 
-const Timg = {
-    display:'flex',
-    flexDirection:'column',
-    marginTop: '15vh',
-}
+  ${({ page }) =>
+    page &&
+    css`
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      max-width: 414px;
+      height: 100vh;
+      margin: 0 auto;
+    `}
+`
 
-const Tbtn = {
-    marginTop: '15vh',
-    display:'flex',
-    flexDirection:'column',
-    alignItems:'center',
-}
+const Img = styled.img`
+  width: 75%;
+`
+
+const Section = styled.section`
+  background-image: linear-gradient(purple, blue, black);
+  min-height: 100vh;
+`
+
+const StyledLink = styled(Link)`
+  display: block;
+`
 
 const btn1 = {
-    width:'200px',
-    backgroundColor: 'Transparent',
-    color: 'white',
-    borderRadius: '20px',
-    border:' solid 1px white',
-    margin:'4px'
+  width: '100%',
+  backgroundColor: 'transparent',
+  color: 'white',
+  border: '1px solid white',
+  borderRadius: '20px',
+  marginBottom: '1em',
 }
 
 const btn2 = {
-    marginLeft:'auto',
-    marginRight:'auto',
-    width:'200px',
-    backgroundColor: 'white',
-    color: 'blue', 
-    borderRadius: '20px',
-    margin:'4px'
+  width: '100%',
+  backgroundColor: 'white',
+  color: 'blue',
+  borderRadius: '20px',
 }
+//endstyling
 
-const img = {
-    display:'block',
-    marginLeft:'auto',
-    marginRight:'auto',
-}
-//endstyle
-
-const FirstPageButton = () =>{
-    return(
-        <div class='Body' style={container}>
-            <div style={Timg}>
-                <img src={BigLogo} alt="logo" width="75%" style={img}/>
-            </div>
-            <div style={Tbtn}>  
-                <Link to="/login">
-                    <button class="ui button" style={btn1}>Login</button>
-                </Link>
-                <Link to="/signup">
-                     <button class="ui button" style={btn2}>Sign Up</button>
-                </Link>
-            </div>
-        </div>
-    )
+const FirstPageButton = () => {
+  return (
+    <Section>
+      <Container page>
+        <Img src={BigLogo} alt='logo' />
+        <Container button>
+          <StyledLink to='/login'>
+            <button className='ui button' style={btn1}>
+              Login
+            </button>
+          </StyledLink>
+          <StyledLink to='/signup'>
+            <button className='ui button' style={btn2}>
+              Sign Up
+            </button>
+          </StyledLink>
+        </Container>
+      </Container>
+    </Section>
+  )
 }
 
 export default FirstPageButton
