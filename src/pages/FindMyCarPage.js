@@ -48,7 +48,7 @@ const FindMyCarPage = () => {
   useEffect(() => {
     Axios({
       method: 'get',
-      url: `http://ezpark-next.herokuapp.com/api/v1/features/find_my_car`,
+      url: `https://ezpark-next.herokuapp.com/api/v1/features/find_my_car`,
       headers: {
         Authorization: `Bearer ${jwt}`,
       },

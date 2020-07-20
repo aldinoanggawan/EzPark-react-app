@@ -60,7 +60,7 @@ const ParkingLayout = () => {
   const get_item = () => {
     Axios({
       method: 'post',
-      url: `http://ezpark-next.herokuapp.com/api/v1/features/layout/id`,
+      url: `https://ezpark-next.herokuapp.com/api/v1/features/layout/id`,
       data: {
         mall_id: `${params.id}`,
       },

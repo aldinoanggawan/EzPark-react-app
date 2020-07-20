@@ -56,7 +56,7 @@ const HomePage = () => {
 
   useEffect(() => {
     // performing a GET request
-    Axios.get(`http://ezpark-next.herokuapp.com/api/v1/features/`)
+    Axios.get(`https://ezpark-next.herokuapp.com/api/v1/features/`)
       .then(result => {
         // If successful, we do stuffs with 'result'
         setMall(result.data.mall)
@@ -75,7 +75,7 @@ const HomePage = () => {
     e.preventDefault()
     Axios({
       method: 'post',
-      url: `http://ezpark-next.herokuapp.com/api/v1/features/layout`,
+      url: `https://ezpark-next.herokuapp.com/api/v1/features/layout`,
       data: {
         mall: `${mallName.name}`,
       },

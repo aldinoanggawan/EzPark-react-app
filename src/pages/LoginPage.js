@@ -98,7 +98,7 @@ export default function BasicTextFields() {
 
   const handleSubmit = e => {
     e.preventDefault()
-    Axios.post(`http://ezpark-next.herokuapp.com/api/v1/users/login`, {
+    Axios.post(`https://ezpark-next.herokuapp.com/api/v1/users/login`, {
       username: `${usernameInput}`,
       password: `${passwordInput}`,
     })

@@ -34,7 +34,7 @@ function FirstfloorLayout(props) {
     setOpen(false)
     Axios({
       method: 'post',
-      url: `http://ezpark-next.herokuapp.com/api/v1/features/history_add`,
+      url: `https://ezpark-next.herokuapp.com/api/v1/features/history_add`,
       headers: {
         Authorization: `Bearer ${jwt}`,
       },

@@ -48,7 +48,7 @@ const SettingPage = () => {
 
   useEffect(() => {
     Axios({
-      url: `http://ezpark-next.herokuapp.com/api/v1/users/current_user`,
+      url: `https://ezpark-next.herokuapp.com/api/v1/users/current_user`,
       method: 'GET',
       headers: {
         Authorization: `Bearer ${localStorage.jwt}`,
@@ -72,7 +72,7 @@ const SettingPage = () => {
   const handleSubmit = e => {
     e.preventDefault()
     Axios({
-      url: `http://ezpark-next.herokuapp.com/api/v1/users/${info.api_url}`,
+      url: `https://ezpark-next.herokuapp.com/api/v1/users/${info.api_url}`,
       method: 'POST',
       headers: {
         Authorization: `Bearer ${localStorage.jwt}`,

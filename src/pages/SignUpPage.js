@@ -94,7 +94,7 @@ function SignupPage() {
         draggable: true,
       })
     } else {
-      Axios.post(`http://ezpark-next.herokuapp.com/api/v1/users/signup`, {
+      Axios.post(`https://ezpark-next.herokuapp.com/api/v1/users/signup`, {
         username,
         first_name,
         last_name,

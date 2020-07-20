@@ -91,7 +91,7 @@ const HistoryPage = () => {
   useEffect(() => {
     Axios({
       method: 'get',
-      url: `http://ezpark-next.herokuapp.com/api/v1/features/history`,
+      url: `https://ezpark-next.herokuapp.com/api/v1/features/history`,
       headers: {
         Authorization: `Bearer ${jwt}`,
       },
@@ -112,7 +112,7 @@ const HistoryPage = () => {
     console.log(historyId)
     Axios({
       method: 'post',
-      url: `http://ezpark-next.herokuapp.com/api/v1/features/history_delete/${historyId}`,
+      url: `https://ezpark-next.herokuapp.com/api/v1/features/history_delete/${historyId}`,
       headers: {
         Authorization: `Bearer ${jwt}`,
       },
